@@ -6,7 +6,7 @@
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:59:54 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/09/11 18:06:36 by ahmalman         ###   ########.fr       */
+/*   Updated: 2023/09/13 20:21:28 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	handler(int sig, siginfo_t *siginfo, void *context)
 		write(1, &c, 1);
 		if (c == '\0')
 		{
-			usleep(300);
+			usleep(350);
 			kill(siginfo->si_pid, SIGUSR1);
 		}
 		i = 0;
@@ -65,6 +65,6 @@ int	main(int argc, char **argv)
 	}
 	else
 	{
-		ft_putstr_fd("bad bad\n", 1);
+		ft_putstr_fd("Server Cant Work With Any Arguments\n", 1);
 	}
 }

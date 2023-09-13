@@ -6,7 +6,7 @@
 /*   By: ahmalman <ahmalman@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 19:59:54 by ahmalman          #+#    #+#             */
-/*   Updated: 2023/09/11 18:16:54 by ahmalman         ###   ########.fr       */
+/*   Updated: 2023/09/13 20:35:47 by ahmalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,12 @@ int	main(int argc, char**argv)
 		ft_putchar_fd('\n', 1);
 		signal(SIGUSR1, handler);
 		signal(SIGUSR2, handler);
+		ft_putstr_fd("Server Is Running \nWaiting For A Signel \n", 1);
 		while (1)
 			;
 	}
 	else
 	{
-		ft_putstr_fd("bad bad\n", 1);
+		ft_putstr_fd("Server Cant Work With Any Arguments\n", 1);
 	}
 }
